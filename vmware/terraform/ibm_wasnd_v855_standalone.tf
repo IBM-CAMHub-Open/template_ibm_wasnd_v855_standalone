@@ -438,6 +438,7 @@ resource "vsphere_virtual_machine" "WASNode01" {
     label          = "${var.WASNode01-name}.disk0"
     size           = "${var.WASNode01_root_disk_size}"
     keep_on_remove = "${var.WASNode01_root_disk_keep_on_remove}"
+    thin_provisioned = "false"
   }
 
   # Specify the connection
